@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div>ログインスコープ</div>
+	<div th:text="${param.userId}"></div>
+	<div th:text="${param.password}"></div>
+	<form method="post" action="/loginRequest">
+		<label class="">ID</label>
+		<input type="number" name="userId" />
+		<label class="">パスワード</label>
+		<input type="password" name="password" />
+		<input type="submit" name="submit" value="ログイン" />
+	</form>
+	<a href="/">トップ画面へ移動</a>
+</body>
+</html>
